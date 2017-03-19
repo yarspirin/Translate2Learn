@@ -7,27 +7,38 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E933EBA1E7EC1CB003431C8 /* Student Male_000000_32.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E933EB91E7EC1CB003431C8 /* Student Male_000000_32.png */; };
+		1E933EBC1E7EC1DD003431C8 /* Google Translate_000000_32.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E933EBB1E7EC1DD003431C8 /* Google Translate_000000_32.png */; };
 		1E98626A1E7EA424009539CD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E9862691E7EA424009539CD /* main.m */; };
 		1E98626D1E7EA424009539CD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E98626C1E7EA424009539CD /* AppDelegate.m */; };
-		1E9862701E7EA424009539CD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E98626F1E7EA424009539CD /* ViewController.m */; };
 		1E9862731E7EA424009539CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E9862711E7EA424009539CD /* Main.storyboard */; };
 		1E9862761E7EA424009539CD /* Translate2Learn.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1E9862741E7EA424009539CD /* Translate2Learn.xcdatamodeld */; };
 		1E9862781E7EA424009539CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E9862771E7EA424009539CD /* Assets.xcassets */; };
 		1E98627B1E7EA424009539CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E9862791E7EA424009539CD /* LaunchScreen.storyboard */; };
+		1E98628C1E7EA693009539CD /* MVTranslateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E98628B1E7EA693009539CD /* MVTranslateViewController.m */; };
+		1E98628F1E7EA69D009539CD /* MVLearnViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E98628E1E7EA69D009539CD /* MVLearnViewController.m */; };
+		5DB1E15BD399B2A1C952724F /* libPods-Translate2Learn.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E3BF79C174ED9CE0E56C97D8 /* libPods-Translate2Learn.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1E933EB91E7EC1CB003431C8 /* Student Male_000000_32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Student Male_000000_32.png"; path = "../../com.visualpharm.Icons8/ios/People/Student Male_000000_32.png"; sourceTree = "<group>"; };
+		1E933EBB1E7EC1DD003431C8 /* Google Translate_000000_32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Google Translate_000000_32.png"; path = "../../com.visualpharm.Icons8/ios/Logos/Google Translate_000000_32.png"; sourceTree = "<group>"; };
 		1E9862651E7EA424009539CD /* Translate2Learn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Translate2Learn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E9862691E7EA424009539CD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1E98626B1E7EA424009539CD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1E98626C1E7EA424009539CD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		1E98626E1E7EA424009539CD /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		1E98626F1E7EA424009539CD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		1E9862721E7EA424009539CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1E9862751E7EA424009539CD /* Translate2Learn.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Translate2Learn.xcdatamodel; sourceTree = "<group>"; };
 		1E9862771E7EA424009539CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1E98627A1E7EA424009539CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1E98627C1E7EA424009539CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1E98628A1E7EA693009539CD /* MVTranslateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MVTranslateViewController.h; sourceTree = "<group>"; };
+		1E98628B1E7EA693009539CD /* MVTranslateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MVTranslateViewController.m; sourceTree = "<group>"; };
+		1E98628D1E7EA69D009539CD /* MVLearnViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MVLearnViewController.h; path = Assets.xcassets/MVLearnViewController.h; sourceTree = "<group>"; };
+		1E98628E1E7EA69D009539CD /* MVLearnViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MVLearnViewController.m; path = Assets.xcassets/MVLearnViewController.m; sourceTree = "<group>"; };
+		5EE9B08F977979C1CFBD5376 /* Pods-Translate2Learn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Translate2Learn.release.xcconfig"; path = "Pods/Target Support Files/Pods-Translate2Learn/Pods-Translate2Learn.release.xcconfig"; sourceTree = "<group>"; };
+		B299F58591994B6717EAF213 /* Pods-Translate2Learn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Translate2Learn.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Translate2Learn/Pods-Translate2Learn.debug.xcconfig"; sourceTree = "<group>"; };
+		E3BF79C174ED9CE0E56C97D8 /* libPods-Translate2Learn.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Translate2Learn.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DB1E15BD399B2A1C952724F /* libPods-Translate2Learn.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +58,8 @@
 			children = (
 				1E9862671E7EA424009539CD /* Translate2Learn */,
 				1E9862661E7EA424009539CD /* Products */,
+				59FDD3041BAEA90FED9C3DEE /* Pods */,
+				714F76674710D98201FDD1CD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,10 +74,12 @@
 		1E9862671E7EA424009539CD /* Translate2Learn */ = {
 			isa = PBXGroup;
 			children = (
+				1E9862851E7EA58A009539CD /* Controller */,
+				1E9862841E7EA580009539CD /* Model */,
+				1E9862831E7EA575009539CD /* View */,
+				1E9862821E7EA52D009539CD /* Resources */,
 				1E98626B1E7EA424009539CD /* AppDelegate.h */,
 				1E98626C1E7EA424009539CD /* AppDelegate.m */,
-				1E98626E1E7EA424009539CD /* ViewController.h */,
-				1E98626F1E7EA424009539CD /* ViewController.m */,
 				1E9862711E7EA424009539CD /* Main.storyboard */,
 				1E9862771E7EA424009539CD /* Assets.xcassets */,
 				1E9862791E7EA424009539CD /* LaunchScreen.storyboard */,
@@ -82,6 +98,57 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		1E9862821E7EA52D009539CD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1E933EBB1E7EC1DD003431C8 /* Google Translate_000000_32.png */,
+				1E933EB91E7EC1CB003431C8 /* Student Male_000000_32.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		1E9862831E7EA575009539CD /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		1E9862841E7EA580009539CD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		1E9862851E7EA58A009539CD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1E98628A1E7EA693009539CD /* MVTranslateViewController.h */,
+				1E98628B1E7EA693009539CD /* MVTranslateViewController.m */,
+				1E98628D1E7EA69D009539CD /* MVLearnViewController.h */,
+				1E98628E1E7EA69D009539CD /* MVLearnViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		59FDD3041BAEA90FED9C3DEE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B299F58591994B6717EAF213 /* Pods-Translate2Learn.debug.xcconfig */,
+				5EE9B08F977979C1CFBD5376 /* Pods-Translate2Learn.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		714F76674710D98201FDD1CD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E3BF79C174ED9CE0E56C97D8 /* libPods-Translate2Learn.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -89,9 +156,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1E98627F1E7EA424009539CD /* Build configuration list for PBXNativeTarget "Translate2Learn" */;
 			buildPhases = (
+				FB58570A3C0A9EFFC12F0878 /* [CP] Check Pods Manifest.lock */,
 				1E9862611E7EA424009539CD /* Sources */,
 				1E9862621E7EA424009539CD /* Frameworks */,
 				1E9862631E7EA424009539CD /* Resources */,
+				95E9B67CFD769061775FA8C5 /* [CP] Embed Pods Frameworks */,
+				C58624CFAF1A8B15D1A46808 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -143,21 +213,72 @@
 			files = (
 				1E98627B1E7EA424009539CD /* LaunchScreen.storyboard in Resources */,
 				1E9862781E7EA424009539CD /* Assets.xcassets in Resources */,
+				1E933EBA1E7EC1CB003431C8 /* Student Male_000000_32.png in Resources */,
+				1E933EBC1E7EC1DD003431C8 /* Google Translate_000000_32.png in Resources */,
 				1E9862731E7EA424009539CD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		95E9B67CFD769061775FA8C5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Translate2Learn/Pods-Translate2Learn-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C58624CFAF1A8B15D1A46808 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Translate2Learn/Pods-Translate2Learn-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FB58570A3C0A9EFFC12F0878 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1E9862611E7EA424009539CD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1E9862701E7EA424009539CD /* ViewController.m in Sources */,
 				1E98626D1E7EA424009539CD /* AppDelegate.m in Sources */,
+				1E98628F1E7EA69D009539CD /* MVLearnViewController.m in Sources */,
 				1E9862761E7EA424009539CD /* Translate2Learn.xcdatamodeld in Sources */,
 				1E98626A1E7EA424009539CD /* main.m in Sources */,
+				1E98628C1E7EA693009539CD /* MVTranslateViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +396,7 @@
 		};
 		1E9862801E7EA424009539CD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B299F58591994B6717EAF213 /* Pods-Translate2Learn.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 7544MQP9KA;
@@ -287,6 +409,7 @@
 		};
 		1E9862811E7EA424009539CD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5EE9B08F977979C1CFBD5376 /* Pods-Translate2Learn.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 7544MQP9KA;
@@ -316,6 +439,7 @@
 				1E9862811E7EA424009539CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
