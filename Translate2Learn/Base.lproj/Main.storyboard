@@ -6,6 +6,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,9 +23,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aaM-BI-L29">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aaM-BI-L29">
                                 <rect key="frame" x="0.0" y="20" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <textAttributes key="titleTextAttributes">
                                     <color key="textColor" red="1" green="0.1346940861" blue="0.26969050820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </textAttributes>
@@ -31,14 +32,22 @@
                                     <navigationItem title="Learn" id="U9D-Kx-zVq"/>
                                 </items>
                             </navigationBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KKe-zX-tlu">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KKe-zX-tlu">
                                 <rect key="frame" x="0.0" y="64" width="320" height="455"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="aaM-BI-L29" firstAttribute="leading" secondItem="KKe-zX-tlu" secondAttribute="leading" id="2Ap-yd-RYH"/>
+                            <constraint firstItem="aaM-BI-L29" firstAttribute="trailing" secondItem="KKe-zX-tlu" secondAttribute="trailing" id="6XK-gp-QgQ"/>
+                            <constraint firstItem="aaM-BI-L29" firstAttribute="leading" secondItem="EnN-ft-6ou" secondAttribute="leading" id="CFi-Rz-lFk"/>
+                            <constraint firstAttribute="trailing" secondItem="aaM-BI-L29" secondAttribute="trailing" id="MJr-fC-Ws2"/>
+                            <constraint firstItem="KKe-zX-tlu" firstAttribute="top" secondItem="aaM-BI-L29" secondAttribute="bottom" id="OkC-ig-0Mz"/>
+                            <constraint firstItem="KKe-zX-tlu" firstAttribute="bottom" secondItem="xx8-kp-9ce" secondAttribute="top" id="mrY-Mt-um8"/>
+                            <constraint firstItem="aaM-BI-L29" firstAttribute="top" secondItem="byP-Bm-qEr" secondAttribute="bottom" id="vDF-O0-9kx"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Learn" image="Student Male_000000_32.png" id="vuc-iL-ah0"/>
                     <connections>
@@ -61,9 +70,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Bb-Cn-5DN">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Bb-Cn-5DN">
                                 <rect key="frame" x="0.0" y="20" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <textAttributes key="titleTextAttributes">
                                     <color key="textColor" red="1" green="0.1346940861" blue="0.26969050820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </textAttributes>
@@ -71,65 +79,95 @@
                                     <navigationItem title="Translate" id="mvF-eN-Dx3"/>
                                 </items>
                             </navigationBar>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8qD-QV-g3N">
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8qD-QV-g3N">
                                 <rect key="frame" x="0.0" y="83" width="320" height="113"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="113" id="beB-u1-vOx"/>
+                                </constraints>
                             </pickerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Choose language" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Icc-Dh-0qg">
-                                <rect key="frame" x="93" y="64" width="134" height="25"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose language" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Icc-Dh-0qg">
+                                <rect key="frame" x="100" y="64" width="121" height="19.5"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter the word to translate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yXk-eT-b2I">
-                                <rect key="frame" x="56" y="204" width="209" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter the word to translate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yXk-eT-b2I">
+                                <rect key="frame" x="57" y="200.5" width="207" height="21"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter your word here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jYD-FJ-MHA">
-                                <rect key="frame" x="16" y="233" width="288" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter your word here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jYD-FJ-MHA">
+                                <rect key="frame" x="16" y="229.5" width="288" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Translation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mEw-ny-fvs">
-                                <rect key="frame" x="118" y="363" width="85" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Translation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mEw-ny-fvs">
+                                <rect key="frame" x="118" y="363.5" width="85" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Xgj-Pg-67T"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter the word upper to translate" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1w9-P5-DeX">
-                                <rect key="frame" x="16" y="392" width="288" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter the word upper to translate" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1w9-P5-DeX">
+                                <rect key="frame" x="16" y="392.5" width="288" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="ZnX-b7-Sgx"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J76-bc-iYU">
-                                <rect key="frame" x="92" y="470" width="135" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cTh-da-HUa">
+                                <rect key="frame" x="120.5" y="270.5" width="79" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="0EA-Po-AOH"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
-                                <state key="normal" title="Add to Dictionary"/>
-                                <connections>
-                                    <action selector="addToDictionary:" destination="8vS-eR-G5q" eventType="touchUpInside" id="Lj9-wQ-2fa"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cTh-da-HUa">
-                                <rect key="frame" x="113" y="271" width="93" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
-                                <state key="normal" title="Translate!"/>
+                                <state key="normal" title=" Translate! "/>
                                 <connections>
                                     <action selector="translate:" destination="8vS-eR-G5q" eventType="touchUpInside" id="yie-AX-aHj"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J76-bc-iYU">
+                                <rect key="frame" x="93" y="470.5" width="135" height="35.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="J76-bc-iYU" secondAttribute="height" multiplier="42:11" id="dtp-Ev-FSR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
+                                <state key="normal" title=" Add to Dictionary "/>
+                                <connections>
+                                    <action selector="addToDictionary:" destination="8vS-eR-G5q" eventType="touchUpInside" id="Lj9-wQ-2fa"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mEw-ny-fvs" firstAttribute="centerX" secondItem="7gO-TV-Cy1" secondAttribute="centerX" id="13W-u6-uW9"/>
+                            <constraint firstItem="Icc-Dh-0qg" firstAttribute="top" secondItem="6Bb-Cn-5DN" secondAttribute="bottom" id="2Yv-dR-7mV"/>
+                            <constraint firstItem="6Bb-Cn-5DN" firstAttribute="leading" secondItem="7gO-TV-Cy1" secondAttribute="leadingMargin" constant="-16" id="2e2-Rk-y8C"/>
+                            <constraint firstItem="jYD-FJ-MHA" firstAttribute="leading" secondItem="1w9-P5-DeX" secondAttribute="leading" id="4X5-vm-ITC"/>
+                            <constraint firstItem="jYD-FJ-MHA" firstAttribute="top" secondItem="yXk-eT-b2I" secondAttribute="bottom" constant="8" symbolic="YES" id="5yo-kR-7Bc"/>
+                            <constraint firstItem="cTh-da-HUa" firstAttribute="top" secondItem="jYD-FJ-MHA" secondAttribute="bottom" constant="11" id="A0X-0h-4zJ"/>
+                            <constraint firstItem="BvT-cz-iaV" firstAttribute="top" secondItem="J76-bc-iYU" secondAttribute="bottom" constant="13" id="GEJ-RM-OsS"/>
+                            <constraint firstItem="yXk-eT-b2I" firstAttribute="centerX" secondItem="7gO-TV-Cy1" secondAttribute="centerX" id="Oj0-L7-EvN"/>
+                            <constraint firstItem="1w9-P5-DeX" firstAttribute="top" secondItem="mEw-ny-fvs" secondAttribute="bottom" constant="8" symbolic="YES" id="TBc-Ab-Kwq"/>
+                            <constraint firstItem="1w9-P5-DeX" firstAttribute="centerX" secondItem="7gO-TV-Cy1" secondAttribute="centerX" id="TEr-aF-uPK"/>
+                            <constraint firstItem="8qD-QV-g3N" firstAttribute="top" secondItem="Icc-Dh-0qg" secondAttribute="bottom" constant="-0.5" id="VLM-WY-Joc"/>
+                            <constraint firstItem="J76-bc-iYU" firstAttribute="top" secondItem="1w9-P5-DeX" secondAttribute="bottom" constant="48" id="YIR-eO-eHO"/>
+                            <constraint firstItem="cTh-da-HUa" firstAttribute="centerX" secondItem="7gO-TV-Cy1" secondAttribute="centerX" id="bED-Zz-xAj"/>
+                            <constraint firstItem="cTh-da-HUa" firstAttribute="centerY" secondItem="7gO-TV-Cy1" secondAttribute="centerY" id="iLF-gv-Xkb"/>
+                            <constraint firstItem="Icc-Dh-0qg" firstAttribute="centerX" secondItem="7gO-TV-Cy1" secondAttribute="centerX" id="iRu-za-zTH"/>
+                            <constraint firstItem="jYD-FJ-MHA" firstAttribute="centerX" secondItem="7gO-TV-Cy1" secondAttribute="centerX" id="j8p-aT-vD8"/>
+                            <constraint firstItem="6Bb-Cn-5DN" firstAttribute="width" secondItem="7gO-TV-Cy1" secondAttribute="height" multiplier="40:71" id="kzB-FK-Vyj"/>
+                            <constraint firstItem="8qD-QV-g3N" firstAttribute="centerX" secondItem="7gO-TV-Cy1" secondAttribute="centerX" id="rLU-ar-dJ1"/>
+                            <constraint firstItem="jYD-FJ-MHA" firstAttribute="leading" secondItem="7gO-TV-Cy1" secondAttribute="leadingMargin" id="uf5-Hl-Ipg"/>
+                            <constraint firstItem="6Bb-Cn-5DN" firstAttribute="top" secondItem="O9C-Zm-Xep" secondAttribute="bottom" id="wh1-IX-H2c"/>
+                            <constraint firstItem="J76-bc-iYU" firstAttribute="centerX" secondItem="7gO-TV-Cy1" secondAttribute="centerX" id="yIk-og-T2E"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Translate" image="Google Translate_000000_32.png" id="Gel-8T-i4n"/>
                     <connections>

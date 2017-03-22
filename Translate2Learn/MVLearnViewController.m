@@ -13,6 +13,7 @@
 
 @interface MVLearnViewController ()
 
+@property (nonatomic) NSSet *deprecatedWords;
 @property (nonatomic) NSArray *translations;
 @property (weak, nonatomic) IBOutlet UITableView *translationTableView;
 
@@ -20,11 +21,33 @@
 
 @implementation MVLearnViewController
 
+#pragma mark - Configure Methods -
+- (void) configureDeprecatedWords {
+  _deprecatedWords = [NSSet setWithObjects: @"", nil];
+}
+
+#pragma mark - Verification Methods -
+
+- (void) processTranslations {
+  NSMutableArray *copyToAssign = [[NSMutableArray alloc] init];
+  
+  for (id translation in _translations) {
+    if ([_deprecatedWords containsObject: [translation translated]]) {
+      continue;
+    }
+    
+    [copyToAssign addObject: translation];
+  }
+  
+  _translations = copyToAssign;
+}
+
 #pragma mark - Cell Retrieval Method -
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
   UIAlertController *controller = [UIAlertController alertControllerWithTitle: [_translations[indexPath.row] translated]  message: nil preferredStyle: UIAlertControllerStyleAlert];
   
-  UIAlertAction *action = [UIAlertAction actionWithTitle: @"Learned!" style: UIAlertActionStyleDefault handler: nil];
+  UIAlertAction *action = [UIAlertAction actionWithTitle: @"Learnt!" style: UIAlertActionStyleDefault handler: nil];
   
   [controller addAction: action];
   [self presentViewController: controller animated: YES completion: nil];
@@ -64,6 +87,9 @@
   NSManagedObjectContext *context = ((AppDelegate*) [[UIApplication sharedApplication] delegate]).persistentContainer.viewContext;
   
   _translations = [context executeFetchRequest:fetchRequest error:&error];
+  
+  [self processTranslations];
+  
   NSLog(@"%ld", [_translations count]);
   [self.translationTableView reloadData];
 }
@@ -72,6 +98,7 @@
 
 - (void)viewDidLoad {
   [super viewDidLoad];
+  [self configureDeprecatedWords];
   [self.translationTableView setDelegate: self];
   [self.translationTableView setDataSource: self];
 }

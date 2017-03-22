@@ -21,6 +21,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *translation;
 @property (weak, nonatomic) IBOutlet UIButton *addToDictionaryButton;
 @property (nonatomic) NSString *token;
+@property (nonatomic) BOOL successfulTranslation;
 
 @end
 
@@ -39,6 +40,11 @@
 }
 
 - (IBAction)addToDictionary:(UIButton *)sender {
+  
+  if (!_successfulTranslation) {
+    return;
+  }
+  
   NSManagedObjectContext *context = ((AppDelegate*) [[UIApplication sharedApplication] delegate]).persistentContainer.viewContext;
   
   NSManagedObject *entityNameObj = [NSEntityDescription insertNewObjectForEntityForName:@"Translation" inManagedObjectContext:context];
@@ -188,10 +194,12 @@
   [[manager dataTaskWithRequest:req completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
     
     if (!error) {
+      _successfulTranslation = YES;
       if ([responseObject isKindOfClass:[NSDictionary class]]) {
         [self.translation performSelectorOnMainThread: @selector(setText:) withObject: [self firstWordOf: responseObject[@"Translation"][@"Translation"]] waitUntilDone: YES];
       }
     } else {
+      _successfulTranslation = NO;
       NSLog(@"Error: %@, %@, %@", error, response, responseObject);
       UIAlertController *alertController = [UIAlertController alertControllerWithTitle: @"Request is incorrect" message: @"Please try attempt with another request" preferredStyle: UIAlertControllerStyleAlert];
       
