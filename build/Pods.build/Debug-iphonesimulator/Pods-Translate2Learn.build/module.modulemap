@@ -1,6 +1,0 @@
-framework module Pods_Translate2Learn {
-  umbrella header "Pods-Translate2Learn-umbrella.h"
-
-  export *
-  module * { export * }
-}
